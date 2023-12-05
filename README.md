@@ -13,16 +13,27 @@ Rental
 
 Actor
 
-Address 
+Address
+
 Category 
+
 City 
+
 Country 
+
 Customer
+
 Film 
+
 Film_actor
+
 Film_category 
+
 Inventory 
+
 Language 
+
 Staff 
+
 Store 
 
