@@ -7,9 +7,12 @@ Rockbuster is a hypothetical movie renting business that will be moving into str
 ## Data
 The dataset comprises data on the following parameters:
 
-Payment 
+Payment
+
 Rental 
+
 Actor
+
 Address 
 Category 
 City 
