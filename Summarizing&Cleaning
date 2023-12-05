@@ -1,0 +1,140 @@
+Summarizing & Cleaning Data in SQL
+
+Checking for Clean and Dirty Data:
+
+SELECT title,
+       release_year,
+       language_id,
+       rental_duration,
+       COUNT(*)
+FROM film
+GROUP BY title,
+         release_year,
+         language_id,
+         rental_duration
+HAVING COUNT(*) >1;
+
+SELECT replacement_cost,
+	COUNT(film_id)
+FROM film
+GROUP BY replacement_cost
+ORDER BY replacement_cost DESC
+
+SELECT film_id,
+	COUNT(film_id)
+FROM film
+GROUP BY film_id
+ORDER BY film_id ASC
+
+Summarizing Data:
+
+Rental duration:
+
+SELECT  
+	AVG(rental_duration), 
+	MIN(rental_duration), 
+	MAX(rental_duration)
+FROM film
+
+Rental rate:
+
+SELECT  
+	AVG(rental_rate), 
+	MIN(rental_rate), 
+	MAX(rental_rate)
+FROM film
+
+Length:
+
+SELECT  
+	AVG(length), 
+	MIN(length), 
+	MAX(length)
+FROM film
+
+Replacement cost:
+
+SELECT  
+	AVG(replacement_cost), 
+	MIN(replacement_cost), 
+	MAX(replacement_cost)
+FROM film
+
+
+Release year:
+
+SELECT release_year,
+       COUNT(film_id)
+FROM film
+GROUP BY release_year
+
+Rating:
+
+SELECT rating,
+       COUNT(film_id)
+FROM film
+GROUP BY rating
+
+Language ID:
+
+SELECT language_id,
+       COUNT(film_id)
+FROM film
+GROUP BY language_id
+
+Last update:
+
+SELECT last_update,
+       COUNT(film_id)
+FROM film
+GROUP BY last_update
+
+Store_id:
+
+SELECT store_id,
+       COUNT(customer_id)
+FROM customer
+GROUP BY store_id
+
+First_name:
+
+SELECT first_name,
+       COUNT(customer_id) AS count_of_first_names
+FROM customer
+GROUP BY first_name 
+ORDER BY count_of_first_names DESC
+
+Last_name:
+
+SELECT last_name,
+       COUNT(customer_id) AS count_of_last_names
+FROM customer
+GROUP BY last_name 
+ORDER BY count_of_last_names DESC
+
+Activebool:
+
+SELECT activebool,
+       COUNT(customer_id) 
+FROM customer
+GROUP BY activebool
+
+Create_date:
+
+SELECT create_date,
+       COUNT(customer_id) 
+FROM customer
+GROUP BY create_date
+
+Active (integer):
+
+SELECT active,
+       COUNT(customer_id) 
+FROM customer
+GROUP BY active
+
+
+
+
+
+
