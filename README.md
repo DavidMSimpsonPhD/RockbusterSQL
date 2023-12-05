@@ -37,3 +37,7 @@ Staff
 
 Store 
 
+## Tableau Presentation:
+
+https://public.tableau.com/app/profile/david.simpson8365/viz/RockbusterCustomersPresentation/Story1
+
